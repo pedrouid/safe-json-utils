@@ -1,4 +1,4 @@
-export function safeJsonParse<T>(value: string): T | string {
+export function safeJsonParse<T = any>(value: string): T | string {
   if (typeof value !== 'string') {
     throw new Error(`Cannot safe json parse value of type ${typeof value}`);
   }
