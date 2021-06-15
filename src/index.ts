@@ -10,9 +10,5 @@ export function safeJsonParse<T = any>(value: string): T | string {
 }
 
 export function safeJsonStringify(value: any): string {
-  return typeof value === 'string'
-    ? value
-    : JSON.stringify(value, (key: string, value: any) =>
-        typeof value === 'undefined' ? null : value
-      );
+  return typeof value === 'string' ? value : JSON.stringify(value);
 }
